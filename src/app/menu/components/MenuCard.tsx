@@ -1,4 +1,5 @@
 "use client"
+import { Button } from '@/components/ui/button';
 import React, { useState } from 'react';
 
 interface MenuCardProps {
@@ -30,7 +31,7 @@ const MenuCard: React.FC<MenuCardProps> = ({ title, price, img, addToCart }) => 
 
   return (
     <main>
-      <div className="flex w-64 h-60 flex-col items-center rounded overflow-hidden border border-foreground">
+      <div className="flex w-64 h-60 flex-col items-center rounded overflow-hidden border border-muted">
         <div className="w-full overflow-hidden">
           <img className="" src={img} alt="" />
         </div>
@@ -40,19 +41,19 @@ const MenuCard: React.FC<MenuCardProps> = ({ title, price, img, addToCart }) => 
             <p className="text-muted-foreground">₹{price}.00</p>
           </div>
           <div className="flex h-fit items-center gap-2 text-foreground">
-            <button
-              className="border border-gray-300 rounded-md px-2 py-1"
+            <Button
+              className="border border-gray-300 rounded-md px-2 w-8 py-1"
               onClick={handleDecrement}
             >
               -
-            </button>
+            </Button>
             <p className="">{localQuantity}</p>
-            <button
-              className="border border-gray-300 rounded-md px-2 py-1"
+            <Button
+              className="border border-gray-300 rounded-md px-2 w-8 py-1"
               onClick={handleIncrement}
             >
               +
-            </button>
+            </Button>
           </div>
         </div>
       </div>
