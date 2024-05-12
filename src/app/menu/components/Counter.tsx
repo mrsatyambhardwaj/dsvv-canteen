@@ -17,11 +17,11 @@ export default function Counter() {
 
   return (
     <div className="flex h-fit items-center gap-2 text-foreground">
-      <Button variant="outline" size="small" onClick={handleDecrement}>
+      <Button variant="outline" size="sm" onClick={handleDecrement}>
         -
       </Button>
       <p className="p-2">{count}</p>
-      <Button variant="outline" size="small" onClick={handleIncrement}>
+      <Button variant="outline" size="sm" onClick={handleIncrement}>
         +
       </Button>
     </div>
